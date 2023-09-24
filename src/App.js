@@ -11,11 +11,16 @@ export default function App() {
           <a
             href="https://github.com/yejin-km/react-weather-app"
             target="_blank"
+            rel="noreferrer"
           >
             GitHub
           </a>{" "}
           and{" "}
-          <a href="https://elegant-meerkat-6f18be.netlify.app/" target="_blank">
+          <a
+            href="https://elegant-meerkat-6f18be.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
             Netlify
           </a>
         </footer>
