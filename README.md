@@ -1,3 +1,8 @@
+# react-weather-app
+shecodes project: creating a weather app with React.
+project in progress....
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
