@@ -1,0 +1,13 @@
+.WeatherForecast {
+  text-align: center;
+}
+
+.WeatherForecast .weather-icon {
+  width: 85px;
+  height: 85px;
+}
+
+.WeatherForecast .max-temperature {
+  font-weight: bold;
+  margin-right: 5px;
+}

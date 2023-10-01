@@ -15,7 +15,7 @@ export default function App() {
           >
             GitHub
           </a>{" "}
-          and{" "}
+          and hosted on{" "}
           <a
             href="https://jade-rabanadas-aed151.netlify.app/"
             target="_blank"

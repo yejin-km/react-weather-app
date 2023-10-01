@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
 import axios from "axios";
 
 export default function Weather() {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState("Raleigh");
 
   function handleResponse(response) {
     // console.log(response.data);
     setWeatherData({
+      ready: true,
+      coordinates: response.data.coordinates,
       temperature: Math.round(response.data.temperature.current),
       description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
@@ -19,7 +21,6 @@ export default function Weather() {
       date: new Date(response.data.time * 1000),
       city: response.data.city,
     });
-    setReady(true);
   }
 
   function search() {
@@ -37,7 +38,7 @@ export default function Weather() {
     setCity(event.target.value);
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
@@ -61,6 +62,7 @@ export default function Weather() {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
