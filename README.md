@@ -1,6 +1,5 @@
 # react-weather-app
 shecodes project: creating a weather app with React.
-project in progress....
 
 
 # Getting Started with Create React App
